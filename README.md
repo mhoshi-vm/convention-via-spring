@@ -26,4 +26,4 @@ kubectl apply -f k8s/sample.yaml
 
 # Sample Conventions
 
-Sample convention to add `MinScale:1` to all deployments is added as [MinScale1Convention](src/main/jp/vmware/tanzu/mhoshivm/conventionviaspring/convention)
+Sample convention to add `MinScale:1` to all deployments is added as [MinScale1Convention](src/main/java/jp/vmware/tanzu/mhoshivm/conventionviaspring/convention)
