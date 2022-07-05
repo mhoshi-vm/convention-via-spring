@@ -6,7 +6,7 @@ Very Simple [Convention Service](https://github.com/vmware-tanzu/cartographer-co
 This is currently designed to deploy against 
 [Tanzu Application Platform](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.1/tap/GUID-install-intro.html)
 
-## Prerequsite
+## Prerequisite
 
 * Tanzu Application Platform 1.1 or higher
 * HTTPS endpoint is available (instructions is [here](https://ik.am/entries/699))
