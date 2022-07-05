@@ -1,0 +1,9 @@
+apiVersion: conventions.apps.tanzu.vmware.com/v1alpha1
+kind: ClusterPodConvention
+metadata:
+  name: covention-via-spring
+spec:
+  priority: Early
+  webhook:
+    clientConfig:
+      url: https://my-convention-default.demo.cl01.lespaulstudioplus.info/convention

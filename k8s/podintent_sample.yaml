@@ -2,22 +2,14 @@ apiVersion: conventions.apps.tanzu.vmware.com/v1alpha1
 kind: PodIntent
 metadata:
   name: podintent-test
-  namespace: default
 spec:
-  serviceAccountName: default
   template:
     metadata:
       annotations:
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
-        apps.tanzu.vmware.com/workload-type: web
-        carto.run/workload-name: podintent-test
     spec:
       containers:
-        - image: harbor.cl01.lespaulstudioplus.info/tap/supply-chain/my-convention-default:latest@sha256:cbfad6a372d7178d970d5832138f7e92bc6f6ac2164240b7f98e47a05d718feb
+        - image: ghcr.io/nginx-proxy/nginx-proxy:latest
           name: workload
-          resources: {}
-          securityContext:
-            runAsUser: 1000
-      serviceAccountName: default

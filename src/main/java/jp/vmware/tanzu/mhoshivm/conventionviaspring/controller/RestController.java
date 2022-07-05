@@ -17,7 +17,6 @@ public class RestController {
     }
 
     @PostMapping (value = "/convention", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
     public PodConventionContext Convention(@RequestBody PodConventionContext podConventionContext) {
 
         podConventionContext.setStatus(convention.handler(podConventionContext.getSpec(), podConventionContext.getStatus()));
