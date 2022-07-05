@@ -13,21 +13,18 @@ import java.util.Map;
 @Primary
 public class MinScale1Convention implements Convention{
     @Override
-    public PodConventionContextStatus handler(PodConventionContextSpec podConventionContextSpec, PodConventionContextStatus podConventionContextStatus) {
+    public void handler(PodConventionContextSpec podConventionContextSpec, PodConventionContextStatus podConventionContextStatus) {
         String[] appliedConventions = { "addMinScale1" };
 
         V1PodTemplateSpec podTemplateSpec = podConventionContextSpec.getTemplate();
 
         V1ObjectMeta objectMeta = podTemplateSpec.getMetadata();
         Map<String, String> annotations = objectMeta.getAnnotations();
-        if (annotations != null) {
-            annotations.put("autoscaling.knative.dev/minScale", "1");
-        }
+        annotations.put("autoscaling.knative.dev/minScale", "1");
         objectMeta.setAnnotations(annotations);
         podTemplateSpec.setMetadata(objectMeta);
 
         podConventionContextStatus.setAppliedConventions(appliedConventions);
         podConventionContextStatus.setTemplate(podTemplateSpec);
-        return podConventionContextStatus;
     }
 }

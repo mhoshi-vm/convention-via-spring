@@ -5,5 +5,5 @@ import jp.vmware.tanzu.mhoshivm.conventionviaspring.model.PodConventionContextSt
 
 public interface Convention {
 
-    PodConventionContextStatus handler(PodConventionContextSpec podConventionContextSpec, PodConventionContextStatus podConventionContextStatus);
+    void handler(PodConventionContextSpec podConventionContextSpec, PodConventionContextStatus podConventionContextStatus);
 }

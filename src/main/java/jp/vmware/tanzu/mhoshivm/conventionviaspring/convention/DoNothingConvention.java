@@ -9,13 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class DoNothingConvention implements Convention{
     @Override
-    public PodConventionContextStatus handler(PodConventionContextSpec podConventionContextSpec, PodConventionContextStatus podConventionContextStatus) {
+    public void handler(PodConventionContextSpec podConventionContextSpec, PodConventionContextStatus podConventionContextStatus) {
 
         String[] appliedConventions = { "do-nothing" };
 
         V1PodTemplateSpec podTemplateSpec = podConventionContextSpec.getTemplate();
         podConventionContextStatus.setAppliedConventions(appliedConventions);
         podConventionContextStatus.setTemplate(podTemplateSpec);
-        return podConventionContextStatus;
     }
 }
