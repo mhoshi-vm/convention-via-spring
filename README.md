@@ -49,7 +49,7 @@ kubectl get podintents -o yaml podintent-test
 
 Should look like the below
 
-```aidl
+```
 status:
 ...
   template:
