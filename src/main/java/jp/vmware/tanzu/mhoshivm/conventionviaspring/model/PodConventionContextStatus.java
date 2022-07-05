@@ -2,8 +2,6 @@ package jp.vmware.tanzu.mhoshivm.conventionviaspring.model;
 
 import io.kubernetes.client.openapi.models.V1PodTemplateSpec;
 
-import java.util.List;
-
 public class PodConventionContextStatus {
     private V1PodTemplateSpec template;
     private String[] appliedConventions;

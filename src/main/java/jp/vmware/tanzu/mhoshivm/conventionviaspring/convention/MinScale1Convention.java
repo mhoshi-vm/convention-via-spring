@@ -20,7 +20,9 @@ public class MinScale1Convention implements Convention{
 
         V1ObjectMeta objectMeta = podTemplateSpec.getMetadata();
         Map<String, String> annotations = objectMeta.getAnnotations();
-        annotations.put("autoscaling.knative.dev/minScale", "1");
+        if (annotations != null) {
+            annotations.put("autoscaling.knative.dev/minScale", "1");
+        }
         objectMeta.setAnnotations(annotations);
         podTemplateSpec.setMetadata(objectMeta);
 
