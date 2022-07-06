@@ -13,3 +13,8 @@ spec:
       containers:
         - image: ghcr.io/nginx-proxy/nginx-proxy:latest
           name: workload
+          resources:
+            limits:
+              memory: 256Mi
+            requests:
+              memory: 256Mi
